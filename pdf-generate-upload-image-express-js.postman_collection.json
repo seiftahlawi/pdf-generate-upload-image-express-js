@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "e878ce32-4406-4cd0-aa0d-8d2fba56d92d",
+		"name": "pdf-generate-upload-image-express-js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13751145"
+	},
+	"item": [
+		{
+			"name": "upload-image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/images/upload-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"deutsch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pdf/generate-pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pdf",
+						"generate-pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
